@@ -5,6 +5,18 @@ body, html {
     min-height:100vh;
 }
 
+/* POLICE */
+@font-face {
+    font-family: 'Averia Sans Libre Light';
+    src: url(roseniecucheval/roseniecucheval.github.io/AveriaSansLibre-Light.woff2) format(woff2);
+}
+
+@font-face {
+    font-family: 'Averia Sans Libre Bold';
+    src: url(roseniecucheval/roseniecucheval.github.io/AveriaSansLibre-Bold.woff2) format(woff2);
+}
+/* ----- */
+
 /* RESPONSIVE */
 @media screen and (min-width: 640px) {
     body {
@@ -47,7 +59,15 @@ body, html {
 }
 /* ----- */
 
-header, article, nav, aside, footer{
+header, article, nav, footer {
     border-radius:5px;
     padding:5px;
 }
+
+/* HEADER */
+
+header p {
+    text-align: center;
+    font-family: 'Averia Sans Libre Bold', Georgia, 'Times New Roman', Times, serif;
+}
+/* ----- */
