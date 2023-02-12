@@ -21,7 +21,7 @@ a:hover {
 
 h1 {
   margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block-end: 1em;
   font-family: 'Averia Sans Libre Light';
   font-size: 2em;
 }
@@ -74,7 +74,6 @@ em {
     grid-row: 2;
   }
 }
-/* ----- */
 
 /* HEADER */
 header p {
@@ -99,7 +98,6 @@ header p {
 #letter-pink {
   color: #DD5353;
 }
-/* ----- */
 
 /* NAVIGATION */
 nav {
@@ -115,16 +113,34 @@ nav {
 nav p {
   padding: 5%;
 }
-/* ----- */
 
 /* FOOTER */ 
 footer {
   text-align: center;
   font-size: small;
 }
-/* ----- */
 
 /* ARTICLE */
 article {
   padding: 0 0 0 3em;
+}
+
+/* CONTACT FORM */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label, form p {
+  width: 100px;
+  float: left;
+}
+
+input {
+  margin-bottom: 1em;
+  width: 300px;
+}
+
+#required {
+  font-size: small;
 }
