@@ -1,156 +1,122 @@
+/* GENERAL */
 body, html {
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  min-height: 100vh;
-  font-family: 'Open Sans Light', Arial, Helvetica, sans-serif;
-}
-
-header, article, nav, footer {
-  padding: 0.5em;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans Light', Arial, Helvetica, sans-serif;
 }
 
 a {
-  text-decoration: none;
-  color: #000000;
+    text-decoration: none;
+    color: #000000;
 }
 
 a:hover {
-  font-weight: bold;
-}
-
-h1 {
-  margin-block-start: 0;
-  margin-block-end: 1em;
-  font-family: 'Averia Sans Libre Light';
-  font-size: 2em;
-}
-
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
 }
 
 em {
-  font-style: normal;
+    font-style: normal;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 /* RESPONSIVE */
 @media screen and (min-width: 640px) {
-  body {
-    display: grid;
-    grid-gap: 0.5em;
-    box-sizing: border-box;
-    grid-template-columns: 20vw auto 30vw;
-    grid-template-rows: 25vh auto 10vh;
-  }
-  header {
-    grid-row: 1;
-    grid-column: 1/4;
-  }
-  article {
-    grid-column: 2;
-  }
-  nav {
-    grid-row: 2;
-    grid-column: 1;
-  }
-  aside {
-    grid-row: 2;
-    grid-column: 3;
-    background-color: #537FE7;
-  }
-  footer {
-    grid-row: 3;
-    grid-column: 1/4;
-  }
+    body {
+        display: grid;
+        padding: 0.5em;
+        grid-template-columns: 10vw auto 10vw;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    header {
+        grid-row: 1;
+        grid-column: 1/4;
+    }
+
+    article {
+        grid-row: 2;
+        grid-column: 1/4;
+    }
+
+    footer {
+        grid-row: 3;
+        grid-column: 1/4;
+    }
 }
 
-@media screen and (max-width: 640px){
-  body {
-    display: grid;
-    grid-gap: 0.5em;
-    box-sizing: border-box;
-    padding: 0.5em;
-    grid-template-rows: 25vh 15vh auto 15vh;
-  }
+@media screen and (max-width: 640px) {
+    body {
+        display: grid;
+        padding: 0.5em;
+        grid-template-rows: auto auto auto;
+    }
+}
 
-  nav {
-    grid-row: 2;
-  }
+header, article, nav, aside, footer {
+    padding: 5px;
 }
 
 /* HEADER */
-header p {
-  text-align: center;
-  font-family: 'Averia Sans Libre Light', Georgia, 'Times New Roman', Times, serif;
-  font-weight: bold;
-  font-size: 4em;
+.navbar-brand {
+    font-family: 'Averia Sans Libre Light', Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
-#letter-blue {
-  color: #537FE7;
-}
-
-#letter-red {
-  color: #C21010;
-}
-
-#letter-yellow {
-  color: #FFEA20;
-}
-
-#letter-pink {
-  color: #DD5353;
-}
-
-/* NAVIGATION */
-nav {
-  border-right: solid 1px;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  height: fit-content;
-  padding-left: 3em;
-}
-
-nav p {
-  padding: 5%;
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
 }
 
 /* FOOTER */ 
 footer {
-  text-align: center;
-  font-size: small;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-/* ARTICLE */
-article {
-  padding: 0 0 0 3em;
+footer div {
+    margin-left: 1em;
 }
 
-/* CONTACT FORM */
-form {
-  display: flex;
-  flex-direction: column;
+/* CAROUSEL */
+.carousel-control-next-icon {
+    background-image: url(icons/caret-right-fill.svg);
 }
 
-label, form p {
-  width: 100px;
-  float: left;
+.carousel-control-prev-icon {
+    background-image: url(icons/caret-left-fill.svg);
 }
 
-input {
-  margin-bottom: 1em;
-  width: 300px;
+.carousel-indicators li {
+    background-color: rgba(0, 31, 63, 0.5);
 }
 
-#required {
-  font-size: small;
+.carousel-indicators .active {
+    background-color: #001F3F;
 }
 
-img {
-  width: 100%; /* takes the 100 % width of its container (.box div)*/
-  height: 100%; /* takes the 100 % height of its container (.box div)*/
+/* SOCIAL */
+.social {
+    background-color: #001F3F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    border: solid 2px #79C141;
+}
+
+.social div {
+    margin: 1em;
+}
+
+.social svg:hover {
+    fill: rgba(255, 255, 255, 0.7);
 }
